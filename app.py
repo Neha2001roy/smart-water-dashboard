@@ -74,7 +74,7 @@ st.markdown("---")
 
 df = pd.read_excel(
     "Data/Smart_Water_Treatment_Dummy_Data.xlsx",
-    sheet_name="Sensor_Data"
+    
 )
 
 # =====================================================
