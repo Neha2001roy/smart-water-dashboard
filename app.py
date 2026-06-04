@@ -76,7 +76,10 @@ df = pd.read_excel(
     "Data/Smart_Water_Treatment_Dummy_Data.xlsx",
     
 )
+df.columns = df.columns.str.strip()
 
+st.write("Columns:", df.columns.tolist())
+st.write(df.head())
 # =====================================================
 # SIDEBAR
 # =====================================================
