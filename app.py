@@ -69,18 +69,20 @@ st.markdown("""
 st.markdown("---")
 
 # =====================================================
+# LOAD DATA
 # =====================================================
+
+excel_file = pd.ExcelFile(
+    "Data/Smart_Water_Treatment_Dummy_Data.xlsx"
+)
+
+# Read Sensor_Data sheet
 df = pd.read_excel(
-    "Data/Smart_Water_Treatment_Dummy_Data.xlsx",
-    sheet_name=0
+    excel_file,
+    sheet_name="Sensor_Data"
 )
 
 df.columns = df.columns.str.strip().str.lower()
-
-st.write("Columns Found:")
-st.write(df.columns.tolist())
-
-st.stop()
 # =====================================================
 # SIDEBAR
 # =====================================================
